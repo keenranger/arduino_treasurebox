@@ -17,14 +17,14 @@ void led_wrong();
 
 //5v -> button -> pin(input pullup)
 const int button_pin[5] = {9, 10, 11, 12, 13};
-const int real_ans[4] = {1, 9, 8, 4};
+const int real_ans[4] = {3, 5, 4, 2};
 int ans[4] = {0, 0, 0, 0};
 int i;
 
 
 const int lcd_i2c_addr = 0x27;
 LiquidCrystal_I2C lcd(lcd_i2c_addr, 16, 2);//uno A4 SDA A5 SCL
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(200, 5, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(38, 5, NEO_GRB + NEO_KHZ800);
 Servo opener;
 
 void setup() {

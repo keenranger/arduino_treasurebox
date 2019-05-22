@@ -10,8 +10,10 @@ void right_answer() {
   delay(650);
   opener.write(90);
   congraturation_music_part1();
-  congraturation_music_part2();
-  delay(5000);
+  for (;;) {
+    congraturation_music_part2();
+  }
+  delay(3000);
   lcd.clear();
 }
 ////////////
@@ -30,7 +32,7 @@ void wrong_answer(int correct_nums, int ans[]) {
   lcd.print(correct_nums);
   led_wrong();
   wrong_music();
-  delay(300);
+  delay(1000);
   lcd.clear();
   led_normal();
 }

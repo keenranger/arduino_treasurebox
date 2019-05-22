@@ -1,6 +1,6 @@
 void led_normal() {
   for (int i = 0; i < strip.numPixels(); i++) {
-    strip.setPixelColor(i, strip.Color(0, 0, 0, 255));
+    strip.setPixelColor(i, strip.Color(255, 255, 255));
   }
   strip.show();
   //  colorWipe(strip.Color(255,   0,   0)     , 50); // Red

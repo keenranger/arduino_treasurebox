@@ -3,11 +3,11 @@
 void right_answer();
 void wrong_answer(int correct_nums);
 
-//5v -> button -> pin
+//5v -> button -> pin(input pullup)
 const int button_pin[5] = {9, 10, 11, 12, 13};
-
 const int real_ans[4] = {1, 9, 8, 4};
 int ans[4] = {0, 0, 0, 0};
+int i;
 
 
 const int lcd_i2c_addr = 0x27;
@@ -25,7 +25,6 @@ void setup() {
 }
 
 void loop() {
-  int i;
   int button_state[5] = {digitalRead(button_pin[0]), digitalRead(button_pin[1]),
                          digitalRead(button_pin[2]), digitalRead(button_pin[3]),
                          digitalRead(button_pin[4])//check the status buttton normal -> 1 pressed -> 0
@@ -58,6 +57,9 @@ void loop() {
 
   delay(100);
 }
+////////////////
+//정답 맞췄을 때//
+////////////////
 void right_answer() {
   lcd.clear();
   lcd.setCursor(0, 0);
@@ -65,6 +67,9 @@ void right_answer() {
   delay(5000);
   lcd.clear();
 }
+////////////
+//틀렸을 때//
+////////////
 void wrong_answer(int correct_nums) {
   lcd.clear();
   lcd.setCursor(0, 0);

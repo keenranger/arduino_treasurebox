@@ -19,9 +19,9 @@ void right_answer() {
 ////////////
 //틀렸을 때//
 ////////////
-void wrong_answer(int correct_nums, int ans[]) {
+void wrong_answer(int correct_nums, char ans[]) {
   for (i = 0; i < 4; i++) {
-    ans[i] = 0;
+    ans[i] = 'A';
   }
   lcd.clear();
   lcd.setCursor(0, 0);

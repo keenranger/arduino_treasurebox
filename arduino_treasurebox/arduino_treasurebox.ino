@@ -17,8 +17,8 @@ void led_wrong();
 
 //5v -> button -> pin(input pullup)
 const int button_pin[5] = {9, 10, 11, 12, 13};
-const int real_ans[4] = {3, 5, 4, 2};
-int ans[4] = {0, 0, 0, 0};
+const char real_ans[4] = {'C', 'O', 'D', 'E'};
+char ans[4] = {'A', 'A', 'A', 'A'};
 int i;
 
 
@@ -49,8 +49,10 @@ void loop() {
                         };
   for (i = 0; i < 4; i++) {//add one to the number of each position
     if (button_state[i] == 0) {
-      ans[i] += 1;
-      ans[i] %= 10;//make 0 when number become 10
+      if (ans[i] == 'Z')
+        ans[i] = 'A';
+      else
+        ans[i] += 1;
     }
   }
 

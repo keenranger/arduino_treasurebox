@@ -57,7 +57,7 @@ void loop() {
   }
 
   lcd.setCursor(0, 0);          //order : column,row
-  lcd.print("Guess the Number!");
+  lcd.print("GuessTheAlphabet");
 
   for (i = 0; i < 4; i++) { //display 4 numbers
     lcd.setCursor(i, 1);

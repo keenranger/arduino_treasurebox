@@ -7,7 +7,7 @@ void right_answer() {
   lcd.print("!Congraturation!");
   led_congraturation();
   opener.write(0);
-  delay(650);
+  delay(1200);
   opener.write(90);
   congraturation_music_part1();
   for (;;) {
